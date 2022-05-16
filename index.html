@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>synchronous_text_vue </title>
+    <!-- <link rel="stylesheet" href="theme.css"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container" id="app">
+        <div class="card">
+            <div>
+            <h1>{{ title }}</h1>
+            <div class="form-control">
+                <input 
+                type="text"  
+                v-bind:placeholder="placeholderString" 
+                v-bind:value="inputValue"
+                v-on:input="inputChangeHandler"
+                >
+            </div>
+        </div>
+            
+            <h2>Синхронный текст: {{ inputValue }}</h2>
+            <hr>
+        </div>  
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="app.js"></script>
+</body>
+</html>
